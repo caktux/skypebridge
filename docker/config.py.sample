@@ -1,0 +1,21 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+servers = [
+    ("irc.freenode.net", 6667),
+    ("hitchcock.freenode.net", 6667),
+    ("leguin.freenode.net", 6667),
+    ("verne.freenode.net", 6667),
+    ("roddenberry.freenode.net", 6667),
+]
+
+nick = "skype-bot"
+botname = "skype2irc"
+password = None
+vhost = False
+
+mirrors = {
+    '#test': 'iWwCuTwsjoIglPL3Fbmc_BM95EyK3683btIvrV_B2lQN4agJGCX7-REKzMl7-ruRqvo2RIgcOkQ',
+}
+
+colors = True
