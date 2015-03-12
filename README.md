@@ -28,13 +28,25 @@ docker run -d -p 5900:5900 -t skype2irc
 
 Connect over VNC on the first run to accept the ToS and API request from skype2irc. The VNC password is `letmein`, as the `-nopw` option of x11vnc didn't play well with the OSX screen sharing for some reason.
 
+### Finalizing and saving your setup
+
+Once you've got the bridge and it's all configured to your liking, you'll want to commit your docker container to have ready-to-run image.
+
+```
+docker commit CONTAINER skypebridge
+```
+
+Then change how you run it to:
+```
+docker run -d -p 5900:5900 -t skypebridge
+```
+
 ### Useful tips
 
 Enter your container with:
 ```
-docker exec -ti <container name> bash
+docker exec -ti CONTAINER bash
 ```
-
 
 ### Running on OSX
 
