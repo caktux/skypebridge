@@ -35,6 +35,8 @@ supervisorctl restart skype2irc
 exit
 ```
 
+Make sure to at least change the VNC password in `supervisord.conf` if you expose the container's port, however an ssh tunnel is highly recommended in that case.
+
 ### Finalizing and saving your setup
 
 Once you've got the bridge and it's all configured to your liking, you'll want to commit your docker container to have a ready-to-run image.

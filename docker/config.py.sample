@@ -9,6 +9,8 @@ servers = [
     ("roddenberry.freenode.net", 6667),
 ]
 
+pm_bridge = False
+owner = "YourIRCnickname"
 nick = "skype-bot"
 botname = "skype2irc"
 password = None
