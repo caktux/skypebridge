@@ -7,7 +7,7 @@ Create group chats with `/createmoderatedchat` and use `/get blob` to get blob I
 
 ### Installation
 ```
-git clone https://github.com/caktux/skype2irc-docker
+git clone https://github.com/caktux/skypebridge
 ```
 
 ### Configuration
@@ -19,7 +19,7 @@ Copy `config.py.sample` to `config.py` and edit to your liking, then copy `crede
 Build the docker container and run it with:
 
 ```
-cd skype2irc-docker/docker
+cd skypebridge/docker
 docker build -t skype2irc .
 docker run -d -p 5900:5900 -t skype2irc
 ```
