@@ -1,4 +1,4 @@
-FROM ubuntu:vivid
+FROM ubuntu:wily
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
 
 # Install our favorite vcs and other requirements
-RUN apt-get install -y git xvfb python python-irclib python-dbus python-gobject dbus-x11 wget vim supervisor
+RUN apt-get install -y git xvfb python python-irclib python-dbus python-gobject dbus-x11 wget supervisor
 
 # Install pip
 RUN wget https://bootstrap.pypa.io/get-pip.py
@@ -23,7 +23,7 @@ RUN apt-get install -y skype
 RUN pip install skype4py
 
 # Get skype2irc
-RUN git clone https://github.com/caktux/skype2irc.git
+RUN git clone --depth=1 https://github.com/caktux/skype2irc.git
 
 # Install x11vnc for first run to allow Skype API
 RUN apt-get install -y x11vnc
